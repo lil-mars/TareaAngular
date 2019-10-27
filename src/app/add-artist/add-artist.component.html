@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card bg-white border-dark">
+      <div class="card-header bg-warning">
+        <strong>
+          <i class='fas fa-pencil-alt' style='font-size:20px'></i>
+          Nuevo artista
+        </strong>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="addForm" class="form-row">
+          <div class="col-4 form-group p-2">
+            <label for="nombre">Nombre: </label>
+            <input formControlName="nombre" id="nombre" type="text" class="form-control" placeholder="Ingrese nombre">
+          </div>
+
+          <div class="col-4 form-group p-2">
+            <label for="descripcion">Descripcion: </label>
+            <input formControlName="descripcion" id="descripcion" type="text" class="form-control" placeholder="Ingrese nombre">
+          </div>
+          <div class="col-4 form-group p-2">
+            <label for="imagen">Imagen: </label>
+            <input formControlName="imagen" id="imagen" type="text" class="form-control" placeholder="Ingrese nombre">
+          </div>
+          <button class="btn btn-primary col-2" type="submit" (click)="onSubmit()">
+            Registrar
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card bg-white border-dark">
+      <div class="card-header bg-info">
+        <strong>
+          <i class='fas fa-pencil-alt' style='font-size:20px'></i>
+          Editar artista
+        </strong>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="addForm" class="form-row">
+          <div class="col-3 form-group p-2">
+            <label for="nombre">Nombre: </label>
+            <input [(ngModel)]="artist.nombre"  formControlName="nombre" id="nombre" type="text" class="form-control">
+          </div>
+
+          <div class="col-4 form-group p-2">
+            <label for="descripcion">Descripcion: </label>
+            <input [(ngModel)]="artist.descripcion" formControlName="descripcion" id="descripcion" type="text" class="form-control">
+          </div>
+          <div class="col-4 form-group p-2">
+            <label for="imagen">Imagen: </label>
+            <input [(ngModel)]="artist.imagen" formControlName="imagen" id="imagen" type="text" class="form-control">
+          </div>
+          <button class="btn btn-primary col-2" (click)="onSubmit()">
+            Actualizar
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
